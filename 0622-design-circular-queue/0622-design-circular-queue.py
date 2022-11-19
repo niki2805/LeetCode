@@ -36,6 +36,7 @@ class MyCircularQueue:
 
         self.front = self.front.next
         self.count -= 1
+        
         return True
         
 
