@@ -13,6 +13,7 @@ class Solution(object):
                 if i%k!=0:
                     total+=1
                 
+            
             #print(total)
             return total
     
@@ -21,8 +22,8 @@ class Solution(object):
         
         while(l<r):
             mid=(l+r)//2
-            print(mid)
-            if bs(mid)<=h:
+            #print(mid)
+            if bs(mid) <= h:
                 r=mid
             else:
                 l=mid+1
