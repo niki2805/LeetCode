@@ -9,12 +9,9 @@ class Solution(object):
         def bs(k):
             total=0
             for i in piles:
-                total+=(i/k)
-                if i%k!=0:
-                    total+=1
-                
-            
-            #print(total)
+                total+=math.ceil(i/k)
+               
+             
             return total
     
     
@@ -22,7 +19,7 @@ class Solution(object):
         
         while(l<r):
             mid=(l+r)//2
-            #print(mid)
+         
             if bs(mid) <= h:
                 r=mid
             else:
