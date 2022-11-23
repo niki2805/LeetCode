@@ -4,7 +4,7 @@ class Solution:
         start,tank,cur=0,0,0
         
         for i in range(len(gas)):
-            #tank+=gas[i]-cost[i]
+  
             cur+=gas[i]-cost[i]
             if cur<0:
                 start=i+1
