@@ -10,7 +10,7 @@ class Solution:
             if cur<0:
                 start=i+1
                 cur=0
-        print(tank)       
+        #print(tank)       
         return start if tank>=0 else -1
         
         
