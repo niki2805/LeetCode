@@ -1,16 +1,20 @@
 class Solution:
     def rob(self, nums: List[int]) -> int:
         
-        def solve(start,end):
-            one,two=0,0
-            for i in range(start,end+1):
-                one,two=max(one,two+nums[i]),one
-                
-            return one
+        def helper(nums):
+ 
+            prev1,prev2=0,0
         
-        n = len(nums)
-        if n == 1: return nums[0]
+            for i in range(len(nums)):
+           
+                prev1,prev2=prev2,max(prev1+nums[i],prev2)
+            
+     
+            return prev2
+            
+ 
         
-        return max(solve(0, n-2), solve(1, n-1))
+        
+        return max(nums[0]+helper(nums[2:-1]),helper(nums[1:]))
                 
         
